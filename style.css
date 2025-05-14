@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.base {
+  background-color: teal;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+.envelope {
+  height: 0;
+  width: 0;
+  border-top: 100px solid red;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  position: absolute;
+  z-index: 4;
+  transition: all 1s;
+  transform-origin: top center;
+  cursor: pointer;
+}
+
+.cover {
+  height: 0;
+  width: 0;
+  border-top: 200px solid transparent;
+  position: absolute;
+  z-index: 3;
+  pointer-events: none; /* libera clique para a carta */
+}
+
+.cover-left {
+  border-left: 300px solid rgb(200, 0, 0);
+}
+
+.cover-right {
+  border-right: 300px solid rgb(200, 0, 0);
+}
+
+.envelope.open {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.letter {
+  min-height: 200px;
+  width: 280px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  transition: all 0.6s ease-in-out;
+  box-shadow: 0px 0px 2px black;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.letter.slide {
+  transform: translateY(-160px);
+  height: auto;
+  z-index: 5;
+}
+
+.conteudo-fechado {
+  display: block;
+}
+
+.letter.slide .conteudo-fechado {
+  display: none;
+}
+
+.conteudo-aberto {
+  display: none;
+}
+
+.letter.slide .conteudo-aberto {
+  display: block;
+}
+
+.conteudo-aberto p {
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.conteudo-aberto h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.conteudo-aberto strong {
+  font-size: 13px;
+}

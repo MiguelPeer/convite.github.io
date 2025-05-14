@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envelope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="base">
+    <div class="envelope" onclick="abrirEnvelope(this)"></div>
+    <div class="cover cover-left"></div>
+    <div class="cover cover-right"></div>
+    <div class="letter" onclick="mostrarCarta(this)">
+      <div class="conteudo-fechado">
+        <h3>Convite especial para <span id="nome">você</span></h3>
+      </div>
+      <div class="conteudo-aberto">
+        <h3>🎉 Convite Especial</h3>
+        <p><strong>Devocional Presencial entre Amigos</strong></p>
+        <p>📅 Domingo, 18 de Maio</p>
+        <p>🕒 13:30h</p>
+        <p>📍 Casa da Aline</p>
+        <p>Será um tempo de palavra, louvor, amizade e presença de Deus.</p>
+        <p><em>"Onde dois ou três estiverem reunidos em meu nome, ali estarei." — Mateus 18:20</em></p>
+        <p style="margin-top: 1em;">Esperamos você, <strong><span id="nome-interno">você</span></strong>, nesse encontro especial!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
