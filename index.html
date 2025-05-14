@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio id="bg-music" loop>
+    <source src="music_devocional.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+  
 
   <div class="base">
     <div class="envelope" onclick="abrirEnvelope(this)"></div>
@@ -19,10 +24,10 @@
       </div>
       <div class="conteudo-aberto">
         <h3>🎉 Convite Especial</h3>
-        <p><strong>Devocional Presencial entre Amigos</strong></p>
-        <p>📅 Domingo, 18 de Maio</p>
+        <p><strong>Devocional dos Amigos</strong></p>
+        <p>📅 Sabado, 31 de Maio</p>
         <p>🕒 13:30h</p>
-        <p>📍 Casa da Aline</p>
+        <p>📍 Casa do Vanderley</p>
         <p>Será um tempo de palavra, louvor, amizade e presença de Deus.</p>
         <p><em>"Onde dois ou três estiverem reunidos em meu nome, ali estarei." — Mateus 18:20</em></p>
         <p style="margin-top: 1em;">Esperamos você, <strong><span id="nome-interno">você</span></strong>, nesse encontro especial!</p>
@@ -31,5 +36,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 </body>
 </html>
